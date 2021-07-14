@@ -1,0 +1,1 @@
+export let fetchAllRequest = 'https://rickandmortyapi.com/api/character';
