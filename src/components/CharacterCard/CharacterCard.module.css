@@ -45,5 +45,5 @@
 }
   
 .link:hover {
-    color: orange;
+    color: var(--highlight-color);
 }

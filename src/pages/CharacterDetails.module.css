@@ -7,7 +7,7 @@
 }
 
 .character-details-card {
-    box-shadow: 1px 0 6px #444;
+    box-shadow: 1px 0 6px var(--shadow-color);
     background-color: var(--primary-color);
     color: var(--text-color);
     min-width: 40rem;
@@ -20,14 +20,6 @@
     padding: 2rem 0;
 }
 
-.status-alive {
-    color: greenyellow;
-}
-
-.status-dead {
-    color: gainsboro;
-}
-
 .character-details-field {
     display: flex;
     flex-direction: row;
@@ -36,4 +28,12 @@
     gap: 2rem;
     width: 100%;
     padding: 0 3rem;
+}
+
+.status-alive {
+    color: var(--active-color);
+}
+
+.status-dead {
+    color: var(--inactive-color);
 }

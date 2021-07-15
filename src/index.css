@@ -1,7 +1,13 @@
 :root {
   --primary-color: #50A6C2;
   --secondary-color: aqua;
+  --highlight-color: orange;
   --text-color: white;
+  --active-color: greenyellow;
+  --inactive-color: gainsboro;
+  --shadow-color: #444;
+
+  height: 100%;
 }
 
 html, body {
@@ -15,19 +21,15 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
 html {
   font-size: 62.5%;
   background-color: var(--surface-50);
 }
 
-#root {
-  height: 100%;
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 code {

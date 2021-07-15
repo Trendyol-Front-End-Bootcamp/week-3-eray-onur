@@ -1,0 +1,17 @@
+.button {
+    padding: 2rem;
+    width: 10rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-weight: 700;
+    transition: all .2s;
+}
+
+.button:hover {
+    background: var(--highlight-color);
+}
+
+.button:disabled {
+    background-color: var(--inactive-color);
+}

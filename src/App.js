@@ -1,5 +1,5 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { Route, Switch, BrowserRouter, useLocation, Router } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import { Route, Switch, useLocation } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import CharacterDetails from './pages/CharacterDetails';
 

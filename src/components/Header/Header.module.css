@@ -1,0 +1,14 @@
+.header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+    width: 100%;
+}
+  
+.header-title {
+    font-size: 4.4rem;
+}
