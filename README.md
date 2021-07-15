@@ -2,6 +2,12 @@
 
 This project was developed during "121 - Trendyol Frontend Developer" Bootcamp as an assignment (Week #3).
 
+## Screenshots
+
+![Homepage 1](./screenshots/Homepage_Upper.PNG "Upper Homepage")
+![Homepage 2](./screenshots/Homepage_Lower.PNG "Lower Homepage")
+![Details page](./screenshots/CharacterDetails.PNG "Character Details")
+
 ## Available Scripts
 
 In the project directory, you can run:
