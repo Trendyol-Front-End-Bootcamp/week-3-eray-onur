@@ -1,42 +1,49 @@
 .character-card {
-    background-color: cadetblue;
-    color: beige;
-    display: inherit;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1 0 16%;
-    padding: 1rem;
+  background-color: var(--primary-color);
+  color: beige;
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 16%;
+  padding: 1rem;
+  transition: box-shadow .2s;
+}
+
+.character-card:hover {
+  box-shadow: 1px 0 6px #444;
 }
   
-  .character-card__title {
-    font-size: 1.6rem;
+.character-card__title {
+    font-size: 2rem;
     font-weight: 600;
-    
-  }
+    text-align: center;
+}
   
-  .character-card__title > a {
-    color: beige;
-  }
+.character-card__title > a {
+    color: white;
+}
   
-  .character-card__origin {
-    
-  }
-  
-  .character-card__img {
-    
-  }
-  
-  .character-card__item {
+.character-card__item {
     font-size: 1.2rem;
     padding: 1rem;
-  }
-  
-  .link {
+}
+
+.character-card__img {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.character-card__img > img {
+    width: 100%;
+    height: 40rem;
+}
+
+.link {
     cursor: pointer;
     text-decoration: none;
-  }
+}
   
-  .link:hover {
+.link:hover {
     color: orange;
-  }
+}

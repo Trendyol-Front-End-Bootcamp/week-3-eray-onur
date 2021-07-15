@@ -1,4 +1,3 @@
-import './App.css';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Route, Switch, BrowserRouter, useLocation, Router } from 'react-router-dom';
 import Homepage from './pages/Homepage';

@@ -1,18 +1,28 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchAllRequest } from '../constants';
+import { fetchAllRequest } from '../constants/constants';
 import Page from '../layouts/Page';
+import './CharacterDetails.css';
 
 const CharacterDetails = (props) => {
 
-    const [character, setCharacter] = useState(null);
+    const [character, setCharacter] = useState({
+        name: 'unknown',
+        type: 'unknown',
+        origin: 'unknown',
+        gender: 'unknown',
+        species: 'unknown',
+        created: 'unknown',
+        location: 'unknown',
+        image: ''
+    });
 
     const { id } = useParams();
 
     useEffect(() => {
         axios.get(fetchAllRequest + '/' + id).then((res) => {
-            console.log(res);
+            console.log(res.data);
             setCharacter(res.data);
         });
 
@@ -36,10 +46,42 @@ const CharacterDetails = (props) => {
                 type: "tween",
                 ease: "easeOut"
             }}
+
         >
-            <div>
-                <h4>This is character details page.</h4>
-                { character && <h2>{character.name}</h2>}
+            <div className="character-details-container">
+                <div className="character-details-card">
+                    <h1>{character.name}</h1>
+                    <div className="character-details-field">
+                        <h4>Type</h4>
+                        <p>{character.type}</p>                       
+                    </div>
+                    <div className="character-details-field">
+                        <h4>Species</h4>
+                        <p>{character.species}</p>
+                    </div>
+                    <div className="character-details-field">
+                        <h4>Gender</h4>
+                        <p>{character.gender}</p>
+                    </div>
+                    
+                    <img src={character.image} alt='character'/>
+                    <div className="character-details-field">
+                        <h4>Origin</h4>
+                        <p>{character.origin.name}</p>
+                    </div>
+                    <div className="character-details-field">
+                        <h4>Location</h4>
+                        <p>{character.location.name}</p>
+                    </div>
+                    <div className="character-details-field">
+                        <h4>Created Timestamp</h4>
+                        <p>{character.created}</p>
+                    </div>
+                    <div className="character-details-field">
+                        <h4>Status</h4>
+                        <p className={(character.status === 'Alive') ? 'status-alive' : 'status-dead'}>{character.status}</p>
+                    </div>
+                </div>
             </div>
         </Page>
     );

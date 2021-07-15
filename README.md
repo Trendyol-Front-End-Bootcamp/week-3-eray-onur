@@ -1,6 +1,6 @@
 # Rick and Morty Wikipedia
 
-This project was developed during "121 - Trendyol Frontend Developer" Bootcamp as an assignment.
+This project was developed during "121 - Trendyol Frontend Developer" Bootcamp as an assignment (Week #3).
 
 ## Available Scripts
 

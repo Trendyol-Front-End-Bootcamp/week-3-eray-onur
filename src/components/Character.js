@@ -1,5 +1,6 @@
 import React from 'react';
 import './Character.css';
+import PlaceholderImage from './PlaceholderImage';
 
 const Character = (props) => {
     return (
@@ -10,7 +11,7 @@ const Character = (props) => {
                 Gender: {props.info.gender} 
               </div>
               {
-                (props.info.type) && <div className="character-card__item">Type: {props.info.type} </div>
+                <div className="character-card__item">Type: {(props.info.type) ? props.info.type : 'unknown'} </div>
               }
               <div className="character-card__item">
                 Origin: {props.info.origin.name} 
@@ -18,7 +19,10 @@ const Character = (props) => {
               <div className="character-card__item">
                 Location: {props.info.location.name} 
               </div>
-              <img className="character-card__img" src={props.info.image}/>
+              <div className="character-card__img">
+                {props.info.image ? <img src={props.info.image} alt="character"/> : <PlaceholderImage/>}
+                
+              </div>
               <div className="character-card__status">
                 Status: {props.info.status} 
               </div>
