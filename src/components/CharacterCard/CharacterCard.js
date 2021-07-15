@@ -1,17 +1,17 @@
 import React from 'react';
 import classes from './CharacterCard.module.css';
 import PlaceholderImage from '../PlaceholderImage/PlaceholderImage';
+import { Link } from 'react-router-dom';
 
 // Card containing primary information of a character.
-const CharacterCard = ({name, gender, type, origin, location, image, status, onNavigate}) => {
+const CharacterCard = ({id, name, gender, type, origin, location, image, status, onNavigate}) => {
     return (
         <div>
             <div className={classes["character-card"]}>
               <h2 className={classes["character-card__title"]}>
-                <a 
+                <Link
                   className={classes.link}
-                  href="#" 
-                  onClick={(e) => onNavigate(e)}>{name}</a>
+                  to={`/character_details/${id}`}>{name}</Link>
               </h2>
               <div className={classes["character-card__item"]}>
                 Gender: {gender} 

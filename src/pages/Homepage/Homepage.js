@@ -101,6 +101,7 @@ const Homepage = (props) => {
                     characters.map((c) => (
                         <CharacterCard 
                             key={c.id}
+                            id={c.id}
                             name={c.name}
                             gender={c.gender}
                             type={c.type}
