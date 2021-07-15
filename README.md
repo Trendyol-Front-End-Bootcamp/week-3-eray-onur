@@ -2,6 +2,8 @@
 
 This project was developed during "121 - Trendyol Frontend Developer" Bootcamp as an assignment (Week #3).
 
+Live link: <https://fervent-hodgkin-2cd86e.netlify.app>
+
 ## Screenshots
 
 ![Homepage 1](./screenshots/HomepageUpper.PNG "Upper Homepage")
