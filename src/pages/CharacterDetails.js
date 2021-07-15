@@ -69,7 +69,7 @@ const CharacterDetails = () => {
                         <p>{character.origin.name}</p>
                     </div>
                     <div className={classes["character-details-field"]}>
-                        <h4>Location</h4>
+                        <h4>Last Known Location</h4>
                         <p>{character.location.name}</p>
                     </div>
                     <div className={classes["character-details-field"]}>
