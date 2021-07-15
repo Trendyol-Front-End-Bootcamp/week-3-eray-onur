@@ -28,7 +28,7 @@
 .character-list {
     width: 100%;
     display: grid;
-    grid-gap: 5rem 10rem;
+    grid-gap: 5rem 5rem;
     grid-template-columns: auto auto auto auto;
     padding: 1rem;
 }
@@ -41,3 +41,16 @@
     padding: 2rem;
     gap: 2rem;
 }
+
+@media only screen and (max-width: 1440px) {
+    .character-list {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .character-list {
+        grid-template-columns: auto;
+    }
+}
+  

@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import Page from '../layouts/Page';
-import { fetchAllRequest } from '../constants/api';
-import { addParamToUrl } from './../helpers';
-import CharacterCard from '../components/CharacterCard/CharacterCard';
-import { fetchAllCharacters } from '../services/character.service';
+import Page from '../../layouts/Page';
+import { fetchAllRequest } from '../../constants/api';
+import { addParamToUrl } from '../../helpers';
+import CharacterCard from '../../components/CharacterCard/CharacterCard';
+import { fetchAllCharacters } from '../../services/character.service';
 import classes from './Homepage.module.css';
-import Button from '../components/Button/Button.js';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
+import Button from '../../components/Button/Button.js';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 
 const Homepage = (props) => {
 

@@ -7,11 +7,12 @@ const CharacterCard = ({name, gender, type, origin, location, image, status, onN
     return (
         <div>
             <div className={classes["character-card"]}>
-              <p className={classes["character-card__title"]}>
+              <h2 className={classes["character-card__title"]}>
                 <a 
                   className={classes.link}
                   href="#" 
-                  onClick={(e) => onNavigate(e)}>{name}</a></p>
+                  onClick={(e) => onNavigate(e)}>{name}</a>
+              </h2>
               <div className={classes["character-card__item"]}>
                 Gender: {gender} 
               </div>
@@ -29,7 +30,8 @@ const CharacterCard = ({name, gender, type, origin, location, image, status, onN
                 
               </div>
               <div className={classes["character-card__status"]}>
-                Status: {status} 
+                <p className={`${classes["status-icon"]} ${status === 'Alive' ? classes['alive'] : classes['dead']}`}></p>
+                <p className={classes["status-text"]}>Status: {status}</p>
               </div>
             </div>
         </div>

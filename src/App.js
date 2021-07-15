@@ -1,7 +1,7 @@
 import { AnimatePresence } from 'framer-motion';
 import { Route, Switch, useLocation } from 'react-router-dom';
-import Homepage from './pages/Homepage';
-import CharacterDetails from './pages/CharacterDetails';
+import Homepage from './pages/Homepage/Homepage';
+import CharacterDetails from './pages/CharacterDetails/CharacterDetails';
 
 function App() {
 
