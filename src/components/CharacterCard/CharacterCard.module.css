@@ -24,18 +24,23 @@
 }
   
 .character-card__item {
-    font-size: 1.6rem;
-    padding: 1rem;
+    font-size: 1.4rem;
+    padding: .3rem;
 }
 
 .character-card__img {
-    text-align: center;
-    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: .3rem 0;
 }
 
 .character-card__img > img {
-    width: 100%;
-    height: 40rem;
+    border-radius: 2rem;
+    width: 50%;
+    background-size: cover;
 }
 
 .character-card__status {
@@ -47,9 +52,9 @@
 }
 
 .status-icon {
-    border-radius: 30px;
-    width: 24px;
-    height: 24px;
+    border-radius: 3rem;
+    width: 2.4rem;
+    height: 2.4rem;
     background-color: var(--inactive-color);
 }
 

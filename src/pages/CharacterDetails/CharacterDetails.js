@@ -5,6 +5,19 @@ import { fetchAllRequest } from '../../constants/api';
 import Page from '../../layouts/Page';
 import classes from './CharacterDetails.module.css';
 
+const sliceEpisodeNumber = (episode) => {
+    const episodeRouteString = episode.substring(
+        episode.indexOf('episode/'), 
+        episode.length
+    );
+    const episodeString = episodeRouteString.substring(
+        episodeRouteString.indexOf('/') + 1,
+        episodeRouteString.length
+    );
+    console.log(episodeString);
+    return episodeString;
+}
+
 const CharacterDetails = () => {
 
     const [character, setCharacter] = useState({
@@ -15,16 +28,17 @@ const CharacterDetails = () => {
         species: 'unknown',
         created: 'unknown',
         location: 'unknown',
-        image: ''
+        image: '',
+        episode: [],
     });
 
     const { id } = useParams();
 
     useEffect(() => {
         axios.get(fetchAllRequest + '/' + id).then((res) => {
-            console.log(res.data);
             setCharacter(res.data);
         });
+
 
         return () => {};
     }, [id]);
@@ -80,7 +94,17 @@ const CharacterDetails = () => {
                         <h4>Status</h4>
                         <p className={(character.status === 'Alive') ? classes['status-alive'] : classes['status-dead']}>{character.status}</p>
                     </div>
-                </div>
+                    <div className={classes["episode-grid"]}>
+                        <h3 className={classes["episode-grid-title"]}>Episodes</h3>
+                        <div className={classes["episode-grid-content"]}>
+                        {
+                            character.episode.map((e) => {
+                                return <button className={classes["episode"]}>{sliceEpisodeNumber(e)}</button>;
+                            })
+                        }
+                        </div>
+                    </div>
+                </div>     
             </div>
         </Page>
     );
