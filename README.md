@@ -17,6 +17,7 @@ In the project directory, you can run:
 ### `npm test`
 
 Unit tests concerning service and component tests are started via this command.
+(Note: Tests are still a work in progress.)
 
 ### `npm start`
 
