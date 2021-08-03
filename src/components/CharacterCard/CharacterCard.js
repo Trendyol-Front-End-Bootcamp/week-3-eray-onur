@@ -20,10 +20,10 @@ const CharacterCard = ({id, name, gender, type, origin, location, image, status,
                 <div className={classes["character-card__item"]}>Type: {(type) ? type : 'unknown'} </div>
               }
               <div className={classes["character-card__item"]}>
-                Origin: {origin.name} 
+                Origin: {origin && origin.name} 
               </div>
               <div className={classes["character-card__item"]}>
-                Location: {location.name} 
+                Location: {location && location.name} 
               </div>
               <div className={classes["character-card__img"]}>
                 {image ? <img src={image} alt="character"/> : <PlaceholderImage/>}

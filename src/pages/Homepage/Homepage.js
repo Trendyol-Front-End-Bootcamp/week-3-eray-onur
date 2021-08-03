@@ -103,6 +103,7 @@ const Homepage = (props) => {
                             key={c.id}
                             id={c.id}
                             name={c.name}
+                            species={c.species}
                             gender={c.gender}
                             type={c.type}
                             origin={c.origin}
